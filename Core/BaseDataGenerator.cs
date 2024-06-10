@@ -22,11 +22,19 @@ namespace DataGenerator.Core
         }
         public virtual Data Generate() 
         {
-            return new Data(0);
+            return makeDataObject(0);
         }
         public virtual bool MayYouDo () 
         {
             return false;
+        }
+        internal virtual Data makeDataObject(double value)
+        {
+            return new Data{
+                value=value,
+                infrastructure=inf,
+                state=state
+            };
         }
     }
 }

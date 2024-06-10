@@ -10,5 +10,9 @@ namespace DataGenerator.Domain.Models
     {
         public int num;
         public State(int num) { this.num = num; }
+        public override string ToString()
+        {
+            return "state: "+num.ToString();
+        }
     }
 }

@@ -8,6 +8,7 @@ using DataGenerator.Handlers.Exporters;
 
 namespace DataGenerator
 {
+    
     internal class Control
     {
         private Application app;
@@ -19,22 +20,22 @@ namespace DataGenerator
             structure = new TableStructure(
                                  new List<Infrastructure>
                                  {
-                                     new Infrastructure(1),
-                                     new Infrastructure(2),
-                                     new Infrastructure(3),
-                                     new Infrastructure(4),
-                                     new Infrastructure(5),
-                                     new Infrastructure(6),
-                                     new Infrastructure(7),
-                                     new Infrastructure(8),
-                                     new Infrastructure(9),
-                                     new Infrastructure(10),
-                                     new Infrastructure(11),
-                                     new Infrastructure(12),
-                                     new Infrastructure(13),
-                                     new Infrastructure(14),
-                                     new Infrastructure(15),
-                                     new Infrastructure(16),
+                                     new Infrastructure(1  ,"CGS" ,"1"  ,1, "Flow" , 255),
+                                     new Infrastructure(2  ,"CGS" ,"2"  ,1, "Flow" , 255),
+                                     new Infrastructure(3  ,"CGS" ,"3"  ,1, "Flow" , 255),
+                                     new Infrastructure(4  ,"CGS" ,"4"  ,1, "Flow" , 255),
+                                     new Infrastructure(5  ,"CGS" ,"5"  ,1, "Flow" , 255),
+                                     new Infrastructure(6  ,"CGS" ,"6"  ,1, "Flow" , 255),
+                                     new Infrastructure(7  ,"TBS" ,"7"  ,1, "Press", 255),
+                                     new Infrastructure(8  ,"TBS" ,"8"  ,1, "Press", 255),
+                                     new Infrastructure(9  ,"TBS" ,"9"  ,1, "Press", 144),
+                                     new Infrastructure(10 ,"TBS" ,"10" ,1, "Press", 144),
+                                     new Infrastructure(11 ,"TBS" ,"11" ,1, "Press", 144),
+                                     new Infrastructure(12 ,"TBS" ,"12" ,1, "Press", 144),
+                                     new Infrastructure(13 ,"TBS" ,"13" ,1, "Press", 144),
+                                     new Infrastructure(14 ,"TBS" ,"14" ,1, "Press", 255),
+                                     new Infrastructure(15 ,"TBS" ,"15" ,1, "Press", 255),
+                                     new Infrastructure(16 ,"TBS" ,"16" ,1, "Press", 255),
                                  },
                                  new List<State>
                                  {
@@ -67,7 +68,7 @@ namespace DataGenerator
             var matris = new Matris();
             foreach (var infrastructure in new Enumurate<Infrastructure>(structure.infrastructures))
             {
-                var raw = new DataRaw();
+                var raw = new DataRaw(infrastructure.value);
                 foreach (var state in new Enumurate<State>(structure.states))
                 {
                     bool gened = false;

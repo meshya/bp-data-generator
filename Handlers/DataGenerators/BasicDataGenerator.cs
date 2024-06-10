@@ -23,7 +23,7 @@ namespace DataGenerator.Handlers.DataGenerators
         }
         public override Data Generate()
         {
-            return new Data(random.Next(-10,10));
+            return makeDataObject(random.Next(-10,10));
         }
     }
 }

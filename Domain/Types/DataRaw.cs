@@ -10,10 +10,11 @@ namespace DataGenerator.Domain.Types
 {
     public class DataRaw: AutoEnumurable<Data>
     {
-        public State state { get; set; }
+        public Infrastructure infrastructure { get; set; }
         public List<Data> datas { get; set; }
-        public DataRaw() 
+        public DataRaw(Infrastructure infrastructure) 
         {
+            this.infrastructure = infrastructure;
             datas = new List<Data>();
         }
         public void Push(double value)

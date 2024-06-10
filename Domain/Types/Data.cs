@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataGenerator.Domain.Models;
 
 namespace DataGenerator.Domain.Types
 {
@@ -10,6 +11,8 @@ namespace DataGenerator.Domain.Types
     {
         public double value;
         public int error = 0;
+        public Infrastructure infrastructure;
+        public State state;
         public Data(double value)
         {
             this.value = value;
